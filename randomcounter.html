@@ -1,0 +1,22 @@
+<html>
+<style>
+    #test {
+        color: red;
+    }
+</style>
+<head>
+
+</head>
+<body>
+<script type="text/javascript" language="javascript">
+    const urlParams = new URLSearchParams(window.location.search);
+    const interval = urlParams.get('interval') || 1000;
+    setInterval( () => {
+        const number = Math.random();
+        document.querySelector("#randomNumber").innerHTML = number;
+    }, interval)
+    console.log(interval);
+</script>
+<span id="randomNumber"></span>
+</body>
+</html>
